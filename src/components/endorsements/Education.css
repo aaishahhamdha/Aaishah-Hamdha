@@ -72,9 +72,8 @@
 .education-gpa {
   font-size: 1.3em;
   font-weight: bold;
-  background: linear-gradient(to right, var(--primary-accent), var(--bg-extra-color));
   -webkit-background-clip: text;
-  color: transparent;
+  color: var(--text-primary);
   margin-top: 5px;
 }
 
@@ -88,11 +87,14 @@
   }
 
   .education-institution {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 
-  .education-degree, .education-gpa {
-    font-size: 1.1em;
+  .education-degree{
+    font-size: 0.8rem;
+  }
+  .education-gpa , .education-grade {
+    font-size: 1rem;
   }
 
   .image-container {
