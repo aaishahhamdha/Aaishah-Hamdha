@@ -133,15 +133,17 @@
   padding: 0;
   background-color: var(--background-color2);
   max-height: 100px;
-  overflow-y: hidden;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent thumbnails from wrapping to the next line */
 }
 
-/* Thumbs styling */
 .carousel .thumb {
   border: 2px solid var(--border-color);
   transition: border 0.3s ease-in-out;
   max-height: 60px;
   border-radius: 8px;
+  display: inline-block; /* Ensure thumbnails are displayed in a line */
+  margin-right: 8px; /* Add some space between thumbnails */
 }
 
 .carousel .thumb:hover,
@@ -218,3 +220,5 @@
     box-sizing: border-box;
   }
 }
+
+
