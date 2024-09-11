@@ -8,10 +8,10 @@ import port from '../../assets/port.png';
 import price from '../../assets/price.png';
 
 const projects = [
-  { id: 1, imgsrc: hw, name: 'Mactim', description: 'A device to Monitor and Control Theft in MotorBikes', tech: 'Arduino, C, GPS, GSM, IR sensor, Accelerometer, LED display', details: 'Contribution: Developed GSM module and integrated IR sensor. Created 3D models using Blender and produced a demonstration video using iMovie. Technologies: Arduino, C, Atmel Studio, Blender, KiCad.', link: '' },
-  { id: 2, imgsrc: sw, name: 'Dataverse', description: 'NLP based data visualization tool', tech: 'ReactJs, Python, SQLite', details: 'Role: UI design in Figma, System Modules Integration, testing, User Authentication (JWT), Authorization, Role Management, Natural Language to SQL Query Generation. Technologies: ReactJs, SQLite, Python, Django RestFramework, Langchain, OpenAI.', link: '' },
-  { id: 3, imgsrc: price, name: 'PriceRadar', description: 'E-Commerce website for a dress store', tech: 'ReactJs, Python, MySQL', details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices. Technologies: NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio.', link: '' },
-  { id: 4, imgsrc: port, name: 'Portfolio', description: 'Portfolio website with various sections', tech: 'ReactJs', details: 'Features: Personal portfolio for 2024 including sections such as Hero, About, Skills, Projects, and Contact. Implemented parallax effect, smooth scrolling navigation, and dark/light mode options. Technologies: ReactJs.', link: '' },
+  { id: 1, imgsrc: hw, name: 'Mactim', description: 'A device to Monitor and Control Theft in MotorBikes', tech: 'Arduino, C, GPS, GSM, IR sensor, Accelerometer, LED display,Atmel Studio, Blender, KiCad', details: 'Contribution: Developed GSM module and integrated IR sensor. Created 3D models using Blender and produced a demonstration video using iMovie.', link: '' },
+  { id: 2, imgsrc: sw, name: 'Dataverse', description: 'NLP based data visualization tool', tech: 'ReactJs, SQLite, Python, Django RestFramework, Langchain, OpenAI', details: 'Role: UI design in Figma, System Modules Integration, testing, User Authentication (JWT), Authorization, Role Management, Natural Language to SQL Query Generation.', link: '' },
+  { id: 3, imgsrc: price, name: 'PriceRadar', description: 'E-Commerce website for a dress store', tech: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio.', details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices.', link: '' },
+  { id: 4, imgsrc: port, name: 'Portfolio', description: 'Portfolio website with various sections', tech: 'ReactJs', details: 'Features: Personal portfolio for 2024 including sections such as Hero, About, Skills, Projects, and Contact. Implemented parallax effect, smooth scrolling navigation, and dark/light mode options.', link: '' },
 ];
 
 const chunkArray = (array, chunkSize) => {
