@@ -1,0 +1,344 @@
+.cont{
+  background-image: linear-gradient(170deg,var(--background-color) ,var(--background-color),var(--bg-extra-color));
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: calc(100% - 400px);
+    height: calc(100vh - 7rem);
+    padding-left: 200px;
+    padding-right: 200px;
+    color: var(--primary-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+
+}
+
+.contact-container {
+    width: 90%;
+    display: flex;
+  
+  }
+  form{
+    max-width: 700px;
+    flex: 1;
+    float: left;
+    padding: 20px;
+  }
+  .images{
+    display: flex;
+    flex:1;
+    float: right;
+    padding: 20px;
+    justify-content: center;
+  }
+
+.slide-image{
+    height: 100%;
+    width: 100%;
+    border: 5px solid var(  --border-color);
+    border-radius: 20px;
+
+   
+}
+
+.but{
+    border: none;
+    background-color: transparent;
+margin:0 -1.5rem 0 -1.5rem;
+
+}
+
+.contact-form{
+  color: var(--primary-color);
+}
+
+.contact-form>span>.name, .mail {
+  width: 43.5%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid var(  --border-color2);
+  background-color:var(--border-color2);
+  border-radius: 5px;
+  color: var(--primary-color);
+
+
+
+}
+.contact-form>span> .mail {
+  margin-left: 10px;
+  color: var(--primary-color);}
+  .contact-form .input2,
+  .contact-form textarea {
+    width: 92%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(  --border-color2);
+    background-color:var(--border-color2);
+    border-radius: 5px;
+    margin-top: 5px;
+    color: var(--primary-color);
+    
+
+  }
+  .contact-form textarea {
+    height: 13rem;
+    color: var(--primary-color);}
+  
+  /* Add this to your existing contact.css */
+
+.contact-form button {
+  width:94.5%;
+  padding: 10px 25px;
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  color: var(--gold);
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+  z-index: 1; /* Ensure the button is above the hover animation */
+}
+
+.contact-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start gradient off the button */
+  width: 200%; /* Increase width for smooth animation */
+  height: 100%;
+  background: linear-gradient(120deg, transparent, var(--primary-accent), var(--secondary-accent), transparent);
+  transition: transform 0.5s ease;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.contact-form button:hover::before {
+  transform: translateX(100%); /* Move gradient across the button */
+}
+
+.contact-form button:hover {
+  color: var(--text-primary);
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+.contact-form button:active {
+  transform: scale(0.98); /* Shrink slightly on click */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .contact-form button {
+    font-size: 1rem; /* Adjust font size for small screens */
+    padding: 8px 20px; /* Adjust padding */
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  .contact-form button {
+    font-size: 1.1rem; /* Maintain font size for medium screens */
+    padding: 10px 25px; /* Keep padding consistent */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cont {
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+    flex-direction: column;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .images {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .slide-image {
+    height: auto;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .contact-form>span>.name, .mail {
+    width: 100%;
+  }
+
+  .contact-form>span>.mail {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .contact-form .input2,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+  .footer{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  .cont {
+    background-image: linear-gradient(var(--background-color), var(--background-color), var(--bg-extra-color));
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    color: var(--primary-accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  form {
+    max-width: 80%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .images {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .slide-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--border-color);
+    border-radius: 20px;
+  }
+
+  .but {
+    border: none;
+    background-color: transparent;
+    margin: 0 -1.5rem 0 -1.5rem;
+  }
+
+  .contact-form {
+    color: var(--primary-color);
+  }
+
+  .contact-form>span>.name,
+  .mail {
+    width: 42%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color2);
+    background-color: var(--border-color2);
+    border-radius: 5px;
+    color: var(--primary-color);
+  }
+
+  .contact-form>span>.mail {
+    margin-left: 4%;
+  }
+
+
+
+  .contact-form textarea {
+    width: 96%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color2);
+    background-color: var(--border-color2);
+    border-radius: 5px;
+    margin-top: 5px;
+    color: var(--primary-color);
+  }
+
+  .contact-form textarea {
+    height: 13rem;
+  }
+
+  .contact-form button {
+    width:90%;
+    padding: 10px 20px;
+    background-color: var(--primary-accent);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 96%;
+    margin-top: 5px;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-form button:hover {
+    background-color: var(--secondary-accent);
+  }
+
+
+
+}
+/* Ensure existing styles remain unchanged */
+
+/* New Styles for Responsive Slider */
+@media screen and (max-width: 600px) {
+  .images {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  .images {
+    width: 70%;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--border-color);
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,216 @@
+
+.projects-area {
+  background-image: linear-gradient(180deg,var(--bg-extra-color),var(--bg-extra-color),var(--background-color) );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  transition: background-color 0.5s ease;
+}
+
+.projects {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: var(--background-color2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  margin: 10px;
+  padding: 20px;
+  width: 270px; /* Increased width */
+  min-height: max-content;
+  height: 420px; /* Increased height */
+  text-align: center;
+  color: var(--text-primary);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.card .image-card {
+  height: 50%; /* Increased image height proportionally */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: border-radius 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-accent);
+  transition: color 0.3s ease;
+}
+
+.card .title:hover {
+  color: var(--highlight-color);
+}
+
+
+
+.card .image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, border-radius 0.3s ease;
+}
+
+
+.card .description {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.card .description:hover {
+  color: var(--text-primary);
+}
+
+.card .technologies {
+  font-size: 0.8rem; 
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.card .technologies:hover {
+  color: var(--primary-accent);
+}
+
+.card .link a {
+  color: var(--secondary-accent);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.card .link a:hover {
+  color: var(--highlight-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc(40% - 20px); 
+    height: 200px;
+    margin: 10px;
+    
+  }
+
+  .projects {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+
+@media screen and (max-width: 1329px) {
+  .card {
+    width: calc(50% - 10px); 
+    height: 600px;
+    margin: 10px;
+    
+  }
+
+  .projects {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 88.5%;
+    height: 100%;
+    margin: 10px 20px 0 20px;
+  }
+
+  .projects {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+/* In your project.scss or another CSS/SCSS file */
+
+/* Custom Modal Styles */
+.custom-modal .ant-modal-content {
+  background-color: var(--background-color); /* Use root color */
+  color: var(--text-color); /* Use root text color */
+}
+
+.custom-modal .ant-modal-header {
+  background-color: var(--surface-color); /* Use root color */
+  color: var(--text-primary); /* Use root color */
+}
+
+.custom-modal .ant-modal-title {
+  font-size: 1.5rem; /* Custom title font size */
+}
+
+.custom-modal .ant-modal-footer {
+  background-color: var(--background-color); /* Use root color */
+}
+
+.custom-modal .ant-btn {
+  background-color: var(--highlight-color); /* Use root color */
+  color: var(--button-text); /* Use root color */
+}
+
+.custom-modal .ant-btn:hover {
+  background-color: var(--secondary-accent); /* Use root color */
+  color: var(--button-hover-text); /* Use root color */
+}
+
+
+.project-modal .ant-modal-content {
+  padding: 20px;
+}
+
+.modal-content {
+  text-align: left;
+}
+
+.modal-content img {
+  border-radius: 8px;
+}
+
+.modal-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}

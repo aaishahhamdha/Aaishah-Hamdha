@@ -1,0 +1,128 @@
+.services-section {
+    padding: 4rem 1.5rem;
+    background-image: linear-gradient(180deg, var(--background-color), var(--bg-extra-color), var(--bg-extra-color), var(--background-color));
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-accent);
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Service Card Styles */
+  .service-card {
+    position: relative;
+    background-color: var(--surface-color);
+    backdrop-filter: blur(15px); /* Glassmorphism effect */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.4s ease, background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    color: var(--gold); /* Consistent with button color */
+    border: 3px solid var(--border-color); /* Use root variable for border color */
+    background: var(--surface-color2), var(--surface-color); /* Gradient overlay on glassmorphism */
+    animation: pulse-border 2s infinite; /* Apply the pulse animation */
+  }
+  
+  /* Pulse animation */
+  @keyframes pulse-border {
+    0% {
+      border-color: var(--gold);
+      box-shadow: 0 0 5px var(--gold);
+    }
+    50% {
+      border-color: var(--primary-accent); /* Use a contrasting color for the pulse effect */
+      box-shadow: 0 0 20px var(--primary-accent);
+    }
+    100% {
+      border-color: var(--gold);
+      box-shadow: 0 0 5px var(--gold);
+    }
+  }
+  
+  /* Glass Break Reveal Effect */
+  .service-card:hover {
+    color: var(--text-primary); /* Color changes on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 8px 20px var(--shadow-color);
+    background: rgba(255, 255, 255, 0.3); /* Add a semi-transparent white background to enhance the glass effect */
+  }
+  
+  .service-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Dark overlay on hover */
+    border-radius: 15px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .service-card:hover::before {
+    opacity: 1; /* Show overlay */
+  }
+  
+  .service-card:active {
+    transform: scale(0.98); /* Shrinks slightly on click */
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .card-content p {
+    color: var(--text-secondary);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .services-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .service-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .service-card {
+      padding: 1.8rem;
+    }
+  }
+  

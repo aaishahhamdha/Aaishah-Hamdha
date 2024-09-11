@@ -1,0 +1,102 @@
+.education-section {
+  background-image: linear-gradient(165deg, var(--background-color),var(--background-color),var(--bg-extra-color),var(--bg-extra-color)  );
+
+  color: var(--text-primary);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.education-list {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin: 40px auto 0;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface-color);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.education-item:hover {
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transform: translateY(-10px) scale(1.02);
+  border: 2px solid var(--primary-accent);
+}
+
+.image-container {
+  width: 310px; /* Increased width */
+  height: 310px; /* Increased height */
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.education-item:hover .image-container {
+  transform: scale(1.1);
+}
+
+.education-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-content {
+  text-align: center;
+}
+
+.education-institution {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.education-degree, .education-grades, .education-zscore {
+  font-size: 1.2em;
+  color: var(--text-primary);
+  margin: 10px 0;
+}
+
+.education-gpa {
+  font-size: 1.3em;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-accent), var(--bg-extra-color));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .education-list {
+    grid-template-columns: 1fr;
+  }
+
+  .education-item {
+    padding: 20px;
+  }
+
+  .education-institution {
+    font-size: 1.3em;
+  }
+
+  .education-degree, .education-gpa {
+    font-size: 1.1em;
+  }
+
+  .image-container {
+    width: 140px; /* Adjusted for smaller screens */
+    height: 140px;
+  }
+}

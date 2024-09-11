@@ -1,0 +1,255 @@
+.hero-section {
+    background-image: linear-gradient( 165deg,var(--bg-extra-color),var(--background-color),var(--background-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .text-content {
+    flex: 1;
+    color: var(--text-primary);
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .name1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: bold;
+    color: var(--gold);
+  }
+  .name2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: bold;
+    color: var(--text-primary);
+  }
+  
+  
+  .title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--secondary-accent);
+    margin-bottom: 20px;
+    height: 2.5rem; /* Set a fixed height */
+    line-height: 2.5rem; /* Align text vertically */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+  }
+    
+  .title2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    height: 2.5rem; /* Set a fixed height */
+    line-height: 2.5rem; /* Align text vertically */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+  }
+  
+  .about {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure particles do not overflow */
+}
+  
+  .button-container {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .hero-button {
+    padding: 10px 25px;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    color: var(--gold);
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+    z-index: 1; /* Ensure the button is above the hover animation */
+}
+
+.hero-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start gradient off the button */
+    width: 200%; /* Increase width for smooth animation */
+    height: 100%;
+    background: linear-gradient(120deg, transparent, var(--primary-accent), var(--secondary-accent), transparent);
+    transition: transform 0.5s ease;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.hero-button:hover::before {
+    transform: translateX(100%); /* Move gradient across the button */
+}
+
+.hero-button:hover {
+    color: var(--text-primary);
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+.hero-button:active {
+    transform: scale(0.98); /* Shrink slightly on click */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: clamp(220px, 35vw, 300px);
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+      padding: 0 25px;
+    }
+  
+    .hero-container {
+      flex-direction: column;
+    }
+  
+    .text-content {
+      max-width: 650px;
+    }
+  
+    .name1 {
+      font-size: clamp(3.2rem, 6.5vw, 6rem);
+    }
+    .name2 {
+        font-size: clamp(3.2rem, 6.5vw, 6rem);
+      }
+  
+    .title {
+      font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+      margin-bottom: 22px;
+    }
+    .title2 {
+        font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+        margin-bottom: 22px;
+      }
+  
+    .about {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  
+    .button-container {
+      margin-top: 30px;
+      gap: 20px;
+    }
+  
+    .hero-button {
+      padding: 12px 28px;
+      font-size: 1rem;
+    }
+  
+    .profile-image {
+      margin-top: 30px;
+      width: clamp(250px, 45vw, 350px);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .hero-section {
+      padding: 0 40px;
+    }
+  
+    .hero-container {
+      max-width: 1300px;
+    }
+  
+    .text-content {
+      max-width: 800px;
+    }
+  
+    .name1 {
+      
+        font-size: clamp(5rem, 8vw, 3rem);
+    }
+    .name2 {
+        font-size: clamp(4rem, 8vw, 3rem);
+      }
+    
+  
+    .title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 30px;
+
+    }
+    .title2 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        margin-bottom: 30px;
+  
+      }
+  
+    .about {
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+  
+    .button-container {
+      margin-top: 40px;
+      gap: 25px;
+    }
+  
+    .hero-button {
+      padding: 14px 32px;
+      font-size: 1.2rem;
+    }
+  
+    .profile-image {
+      width: clamp(300px, 55vw, 450px);
+    }
+  }
+  
+/* For smallest mobile screens below 450px */
+@media screen and (max-width: 450px) {
+    .hero-button {
+      padding: 8px 20px; /* Smaller padding */
+      font-size: 0.8rem; /* Smaller font size */
+    }
+  
+    .button-container {
+      gap: 10px; /* Smaller gap between buttons */
+    }
+  }
+  
