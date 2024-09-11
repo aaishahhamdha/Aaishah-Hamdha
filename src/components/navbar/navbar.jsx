@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './navbar.scss';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -11,6 +11,7 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const [theme, setTheme] = useState('dark');
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const handleDarkMode = () => {
     if (theme === 'dark') {
@@ -25,6 +26,19 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Detect clicks outside the menu to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className='navbar'>
@@ -44,12 +58,11 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className='nav-right'>
+      <div className='nav-right' ref={menuRef}>
         <ul className={`links ${menuOpen ? 'active' : ''}`}>
           <li><Link smooth to="#Hero" className='nav-item'>About</Link></li>
           <li><Link smooth to="#Projects" className='nav-item'>Projects</Link></li>
           <li><Link smooth to="#Skills" className='nav-item'>Skills</Link></li>
-          
           <li><Link smooth to="#blogs" className='nav-item'>Blogs</Link></li>
           <li><Link smooth to="#Contact" className='nav-item'>Contact</Link></li>
           <img id='sun-moon' src={theme === 'dark' ? sun : moon} onClick={handleDarkMode} alt="Toggle Theme" />
