@@ -17,24 +17,18 @@
 .tech, .prof {
   flex: 1 1 100%; /* Default to full width for small screens */
   margin: 10px;
-  background: var(--background-color2);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 8px 25px var(--shadow--color);
+ background-color:var(--background-color2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--border-color);
+ 
 }
 
-
-
-.tech:hover, .prof:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px var(--shadow-color);
-}
 
 h2 {
-  font-size: 26px;
+  padding:20px;
+  font-size: 30px;
   font-weight: 500;
   color: var(--secondary-accent);
   text-align: center;
@@ -42,57 +36,73 @@ h2 {
 }
 
 .skill-grid {
+  padding:40px 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
   justify-content: center;
 }
 
-.prof> .skill-grid {
- 
-  gap: 1px;
 
+.prof > .skill-grid {
+  gap: 1px;
 }
+
 .skill-card {
   background: var(--background-light);
   border-radius: 10px;
   padding: 10px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  /* Add floating animation */
+  animation: float 4s ease-in-out infinite;
 }
-.prof > .skill-card {
-  background: var(--background-light);
-  border-radius: 10px;
-  padding: 10px;
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Style for Technical Skills */
+.tech .skill-card {
+  padding: 0; /* Remove padding */
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
-.skill-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px var(--shadow-color);
+.tech .skillimg {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid var(--border-color); /* Border around image */
+  margin-bottom: 0; /* Remove margin-bottom */
 }
 
-.skillimg {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
+.tech .skillname {
+  display: none; /* Hide skill titles for tech skills */
 }
 
-
-.skill-card:hover .skillimg {
-  transform: rotate(360deg);
+/* Style for Professional Skills */
+.prof .skill-card {
+  padding: 0; /* Remove padding */
+  text-align: center;
 }
 
-.skillname {
-  font-size: 16px;
-  font-weight: 600;
+.prof .skillimg {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 15px; /* Rounded square corners */
+  border: 2px solid var(--border-color); /* Border around image */
+}
+
+.prof .skillname {
+  font-size: 19px;
   color: var(--text-secondary);
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .hr {

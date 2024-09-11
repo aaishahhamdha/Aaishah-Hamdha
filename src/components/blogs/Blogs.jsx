@@ -101,6 +101,9 @@ const Blogs = () => {
   return (
     <section className='blog-sec'>
       <h1 className='projects-title'>My Writings</h1>
+      <div className="button-container">
+      <a href="https://medium.com/@aaishamdha" className="hero-button">To My Account</a></div>
+      <hr className='hr'/>
       <div className='blog-container'>
         {blogPosts.map((post, index) => (
           <BlogCard key={index} post={post} />

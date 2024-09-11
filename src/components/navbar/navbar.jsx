@@ -47,9 +47,10 @@ const Navbar = () => {
       <div className='nav-right'>
         <ul className={`links ${menuOpen ? 'active' : ''}`}>
           <li><Link smooth to="#Hero" className='nav-item'>About</Link></li>
-          <li><Link smooth to="#Skills" className='nav-item'>Skills</Link></li>
           <li><Link smooth to="#Projects" className='nav-item'>Projects</Link></li>
-          <li><Link smooth to="#Blogs" className='nav-item'>Blogs</Link></li>
+          <li><Link smooth to="#Skills" className='nav-item'>Skills</Link></li>
+          
+          <li><Link smooth to="#blogs" className='nav-item'>Blogs</Link></li>
           <li><Link smooth to="#Contact" className='nav-item'>Contact</Link></li>
           <img id='sun-moon' src={theme === 'dark' ? sun : moon} onClick={handleDarkMode} alt="Toggle Theme" />
         </ul>

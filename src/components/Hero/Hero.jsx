@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Hero.css';
-import Aaishah from '../../assets/aaishah.png';
+
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,7 +80,7 @@ const Hero = () => {
             Self-motivated and passionate about tech, I thrive on solving challenges and exploring innovative solutions. I’m eager to apply my skills in impactful ways.
           </p>
           <div className="button-container">
-            <a href="/resume.pdf" className="hero-button" target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a href="/Resume.pdf" className="hero-button" target="_blank" rel="noopener noreferrer">View Resume</a>
             <a href="#Projects" className="hero-button">Show My Work</a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 .services-section {
-    padding: 4rem 1.5rem;
+    padding: 10rem 1.5rem;
     background-image: linear-gradient(180deg, var(--background-color), var(--bg-extra-color), var(--bg-extra-color), var(--background-color));
     text-align: center;
   }

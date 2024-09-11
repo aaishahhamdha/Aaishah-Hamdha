@@ -74,12 +74,17 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+
+
+
+
 html {
  
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
-
+  scroll-padding-top: 7rem;
 
   letter-spacing: 0.2px;
 
@@ -90,7 +95,7 @@ html {
 }
 
 section {
-  background-image: linear-gradient( 135deg,var(--bg-extra-color),var(--background-color),var(--background-color));
+  
 
   scroll-snap-align: center;
   overflow-x: hidden;
@@ -105,8 +110,7 @@ a {
  
 @media screen and (max-width: 600px) {
   section {
-    background-image: linear-gradient(var(--bg-extra-color), var(--background-color), var(--background-color));
-    width: 100%;
+  
     scroll-snap-align: center;
     overflow-x: hidden;
     padding-left: 10px;
@@ -126,7 +130,7 @@ a {
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   section {
-    background-image: linear-gradient(var(--bg-extra-color), var(--background-color), var(--background-color));
+    
     width: 100%;
     scroll-snap-align: center;
     overflow-x: hidden;

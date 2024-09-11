@@ -1,5 +1,6 @@
 .blog-sec {
   background-image: linear-gradient(170deg,var(--bg-extra-color),var(--bg-extra-color),var(--background-color) ,var(--background-color));
+  padding: 20px;
 }
 
 .blog-container {
@@ -146,7 +147,7 @@
 
 @media screen and (max-width: 458px) {
   .blog-card {
-    margin:5px -70px;
+    margin:7px -70px;
     width: 280px;
   }
   .blog-snippet{
@@ -155,4 +156,11 @@
   .projects-title{
     font-size:1rem;
   }
+}
+
+
+.hr{
+  margin:50px 10%;
+  width:80%;
+  border-color:var(--gold);
 }

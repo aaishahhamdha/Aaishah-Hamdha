@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import './contact.css';
+import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
+import './contact.css'; 
+import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+
+
 import one from '../../assets/1.jpg';
 import two from '../../assets/2.jpg';
 import three from '../../assets/3.jpg';
@@ -9,84 +13,50 @@ import five from '../../assets/5.jpg';
 import six from '../../assets/6.jpg';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
 
-  const images = [one, two, three, four, five, six];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      subject: subject,
-      message: message,
-    };
-
-    // Send the email using EmailJS
-    emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, templateParams, process.env.USER_ID)
-      .then((response) => {
-        alert('Message sent successfully!');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-      })
-      .catch((error) => {
-        alert('Failed to send message. Please try again later.');
-        console.error('Error:', error);
-      });
-  };
+  const carousalImgs = [
+    { src: one, alt: 'Image 1' },
+    { src: two, alt: 'Image 2' },
+    { src: three, alt: 'Image 3' },
+    { src: four, alt: 'Image 4' },
+    { src: five, alt: 'Image 5' },
+    { src: six, alt: 'Image 6' },
+  ];
 
   return (
     <section className='cont'>
       <div className="contact-container">
-        <form onSubmit={handleSubmit} className="contact-form">
-          <h1>Say Hello</h1>
-          <span>
-            <input
-              type="text"
-              placeholder='Name'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className='name'
-              required
-            />
-            <input
-              type="email"
-              placeholder='E-mail'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className='mail'
-              required
-            />
-          </span>
-          <input
-            type="text"
-            placeholder='Subject'
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className='input2'
-            required
-          />
-          <textarea
-            value={message}
-            placeholder='Message'
-            onChange={(e) => setMessage(e.target.value)}
-            className='input2'
-            required
-          />
-          <button type="submit">Send Now</button>
-        </form>
-        <div className='images'>
-          <div className="slider">
-            <img src={images[currentIndex]} className="slide-image" alt={`Slide ${currentIndex}`} />
-          </div>
+      <div className="carousel-wrapper">
+          <Carousel
+            showThumbs={true}
+            autoPlay
+            infiniteLoop
+            interval={2000}
+            showArrows={false}
+            showStatus={false}
+          >
+            {
+              carousalImgs.map((image) => (
+                <div key={image.alt} className="carousel-image-wrapper">
+                  <img src={image.src} alt={image.alt} className="slide-image" />
+                </div>
+              ))
+            }
+          </Carousel>
+
+        
         </div>
+        <div className="contact-details">
+
+          <h1>Contact Me</h1>
+          <ul>
+          <li><strong><FaEnvelope /></strong> <a href="mailto:aaishahhamdha@gmail.com">aaishahhamdha@gmail.com</a></li>
+            <li><strong><FaPhoneAlt /></strong> <a href="tel:+123456789">+94 75 638 4278</a></li>
+            <li><strong><FaLinkedin /></strong> <a href="http://www.linkedin.com/in/aaishah-hamdha/" target="_blank" rel="noopener noreferrer">Visit my LinkedIn</a></li>
+            <li><strong><FaGithub /></strong> <a href="https://github.com/aaishahhamdha" target="_blank" rel="noopener noreferrer">View my GitHub</a></li>
+          </ul>
+        </div>
+       
       </div>
     </section>
   );
