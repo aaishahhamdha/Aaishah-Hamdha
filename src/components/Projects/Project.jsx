@@ -10,8 +10,8 @@ import price from '../../assets/price.png';
 const projects = [
   { id: 1, imgsrc: hw, name: 'Mactim', description: 'A device to Monitor and Control Theft in MotorBikes', tech: 'Arduino, C, GPS, GSM, IR sensor, Accelerometer, LED display,Atmel Studio, Blender, KiCad', details: 'Contribution: Developed GSM module and integrated IR sensor. Created 3D models using Blender and produced a demonstration video using iMovie.', link: '' },
   { id: 2, imgsrc: sw, name: 'Dataverse', description: 'NLP based data visualization tool', tech: 'ReactJs, SQLite, Python, Django RestFramework, Langchain, OpenAI', details: 'Role: UI design in Figma, System Modules Integration, testing, User Authentication (JWT), Authorization, Role Management, Natural Language to SQL Query Generation.', link: '' },
-  { id: 3, imgsrc: price, name: 'PriceRadar', description: 'E-Commerce website for a dress store', tech: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio.', details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices.', link: '' },
-  { id: 4, imgsrc: port, name: 'Portfolio', description: 'Portfolio website with various sections', tech: 'ReactJs', details: 'Features: Personal portfolio for 2024 including sections such as Hero, About, Skills, Projects, and Contact. Implemented parallax effect, smooth scrolling navigation, and dark/light mode options.', link: '' },
+  { id: 3, imgsrc: price, name: 'PriceRadar', description: 'Webscraper application to scrape amazon products', tech: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio.', details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices.', link: '' },
+  { id: 4, imgsrc: port, name: 'Portfolio', description: 'Responsive personal website', tech: 'ReactJs', details: 'A fully responsive personal portfolio website featuring key sections such as Hero, About, Skills, Projects, Services, and Contact. The site includes smooth scrolling navigation for a seamless user experience, customizable dark/light mode options, and is optimized for flawless interaction across all devices.', link: '' },
 ];
 
 const chunkArray = (array, chunkSize) => {
