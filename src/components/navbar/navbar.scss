@@ -1,8 +1,8 @@
 /* Default navbar styling (for large screens) */
 .navbar {
   width: 60%;
-  height: 4.5rem;
-  padding: 0 2rem;
+  height: 3.5rem;
+  padding: 0 1.6rem;
   margin: 1% 18%;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  border-radius: 30px;
+  border-radius: 25px;
   background: var(--background-color2);
   box-shadow: 0 10px 30px var(--shadow-color);
   border: 2px solid var(--border-color);
@@ -33,11 +33,11 @@
 
 .icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .icon {
-  font-size: 26px; 
+  font-size: 20px; 
   color: var(--text-secondary);
   transition: transform 0.3s, color 0.3s;
 }
@@ -50,7 +50,7 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.7rem;
   list-style-type: none;
   transition: transform 0.3s;
 }
@@ -60,7 +60,7 @@
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s;
-  font-size: 22px; 
+  font-size: 17px; 
 }
 
 .nav-item:hover {
@@ -68,7 +68,7 @@
 }
 
 #sun-moon {
-  width: 1.75rem; 
+  width: 1.5rem; 
   margin-left: 1rem;
   cursor: pointer;
 }

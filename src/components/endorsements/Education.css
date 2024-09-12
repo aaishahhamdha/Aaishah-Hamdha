@@ -2,16 +2,16 @@
   background-image: linear-gradient(165deg, var(--background-color),var(--background-color),var(--bg-extra-color),var(--bg-extra-color)  );
 
   color: var(--text-primary);
-  padding: 80px 20px;
+  padding: 80px 37px;
   text-align: center;
 }
 
 .education-list {
   width: 100%;
-  max-width: 1200px;
+  max-width: 950px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  gap: 25px;
   margin: 40px auto 0;
 }
 
@@ -20,8 +20,8 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--surface-color);
-  padding: 30px;
-  border-radius: 20px;
+  padding: 20px;
+  border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   overflow: hidden;
@@ -35,8 +35,8 @@
 }
 
 .image-container {
-  width: 310px; /* Increased width */
-  height: 310px; /* Increased height */
+  width: 240px; /* Increased width */
+  height: 240px; /* Increased height */
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -58,19 +58,19 @@
 }
 
 .education-institution {
-  font-size: 1.3em;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-secondary);
 }
 
 .education-degree, .education-grades, .education-zscore {
-  font-size: 1.2em;
+  font-size: 0.9rem;
   color: var(--text-primary);
   margin: 10px 0;
 }
 
 .education-gpa {
-  font-size: 1.3em;
+  font-size: 0.9rem;
   font-weight: bold;
   -webkit-background-clip: text;
   color: var(--text-primary);

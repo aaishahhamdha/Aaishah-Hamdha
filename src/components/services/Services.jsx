@@ -6,7 +6,7 @@ import { faCode, faPalette, faCogs } from '@fortawesome/free-solid-svg-icons';
 const ServicesSection = () => {
   return (
     <section className="services-section">
-      <h2 className="projects-title">What I offer</h2>
+      <h2 className="section-title">What I offer</h2>
       
       <div className="services-container">
        

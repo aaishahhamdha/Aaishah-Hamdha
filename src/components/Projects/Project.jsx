@@ -110,7 +110,7 @@ const Project = () => {
                 <div className='description'>{item.description}</div>
                 <div className='technologies'>{item.tech2}</div>
                 <div className='link'>
-                  <a onClick={() => showModal(item)} className='read-more'>more</a>
+                  <a onClick={() => showModal(item)} className='read-more2'>more</a>
                 </div>
               </div>
             ))}

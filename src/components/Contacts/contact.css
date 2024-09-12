@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 980px;
   width: 100%;
   gap: 30px;
   box-sizing: border-box;
@@ -26,10 +26,10 @@
 
 /* Modern Contact Details */
 .contact-details {
-  flex: 1 1 350px;
+  flex: 1 1 220px;
   background: var(--surface-color);
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 10px 25px var(--shadow-color);
   text-align: center;
   color: var(--text-primary);
@@ -37,7 +37,7 @@
 }
 
 .contact-details h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-accent);
 }
@@ -49,11 +49,11 @@
 }
 
 .contact-details ul li {
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 15px;
   background-color: var(--background-color);
   margin: 25px 0;
-  font-size: 1.1rem; /* Fixed the typo */
+  font-size: 0.9rem; /* Fixed the typo */
   color: var(--text-secondary);
   display: flex;
   align-items: center;
@@ -105,10 +105,10 @@
 
 /* Carousel wrapper */
 .carousel-wrapper {
-  flex: 2 1 600px;
+  flex: 2 350px;
   height: auto;
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: 7px;
   overflow: hidden;
   box-shadow: 0 8px 20px var(--shadow-color);
   padding: 0;
@@ -124,7 +124,7 @@
 
 /* Limit the height of the carousel */
 .carousel {
-  max-height: 400px;
+  max-height: 330px;
   overflow: hidden;
 }
 
@@ -132,7 +132,7 @@
 .carousel .thumbs-wrapper {
   padding: 0;
   background-color: var(--background-color2);
-  max-height: 100px;
+  max-height: 50px;
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent thumbnails from wrapping to the next line */
 }
@@ -140,8 +140,8 @@
 .carousel .thumb {
   border: 2px solid var(--border-color);
   transition: border 0.3s ease-in-out;
-  max-height: 60px;
-  border-radius: 8px;
+  max-height: 50px;
+  border-radius: 5px;
   display: inline-block; /* Ensure thumbnails are displayed in a line */
   margin-right: 8px; /* Add some space between thumbnails */
 }

@@ -1,13 +1,14 @@
 .blog-sec {
   background-image: linear-gradient(170deg,var(--bg-extra-color),var(--bg-extra-color),var(--background-color) ,var(--background-color));
   padding: 20px;
+
 }
 
 .blog-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 5rem;
+  margin: 0 3rem;
 }
 
 .blog-card {
@@ -15,10 +16,10 @@
   background-color: var(--surface-color);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px var(--shadow-color);
-  margin: 20px;
-  width: 300px;
+  margin: 15px;
+  width: 240px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   color: var(--text-primary);
@@ -65,31 +66,32 @@
 
 .blog-image {
   width: 100%;
-  height: 200px;
+  height: 160px;
   object-fit: cover;
 }
 
 .blog-title {
-  font-size: 1.5em;
+  font-size: 1.2rem;
   margin: 15px 0 10px;
   padding: 0 15px;
   color: var(--primary-accent);
 }
 
 .blog-snippet {
-  font-size: 1em;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   padding: 0 15px 15px;
 }
 
 .read-more {
+  font-size:0.8rem;
   display: block;
   text-align: center;
   margin: 15px;
-  padding: 10px 15px;
+  padding: 7px 10px;
   background-color: var(--primary-accent);
   color: var(--background-color);
-  border-radius: 5px;
+  border-radius: 2px;
   text-decoration: none;
   transition: background-color 0.3s;
 }
@@ -164,3 +166,5 @@
   width:80%;
   border-color:var(--gold);
 }
+
+
