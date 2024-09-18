@@ -1,0 +1,58 @@
+:root {
+  --background-color: #0D0C1D;
+  --background-color2: rgba(13, 12, 29, 0.85); /* for backdrop */
+  --background-color3: rgba(13, 12, 29, 0.95); /* for deeper backdrop */
+  --primary-accent: #9B5DE5; /* Vibrant purple */
+  --secondary-accent: #00BBF9; /* Complementary blue */
+  --text-primary: #FFFFFF; /* White text for contrast */
+  --text-secondary: #CFCFCF; /* Light grey for secondary text */
+  --shadow-color: #00000077;
+  --surface-color: #1E1E2C;
+  --surface-color2: rgba(30, 30, 44, 0.85);
+  --border-color: #3A3A4F;
+ --bg-extra-color: #250843;  --border-color2: #4E4E68;
+  /* Extra background color for highlights */
+  --mount-image: url('./assets/mount-purple.png'); /* Use relevant image */
+  --star-image: url('./assets/stars-purple.png'); /* Star background image */
+  --gold: #FEC89A; /* Soft gold for accents */
+  --secondary-accent2: #F72585; /* Pinkish secondary accent */
+}
+
+.light-theme {
+  --background-color: #f4f3fb;
+  --background-color2: #f4f3fba5;
+  --background-color3: #f4f3fbce;
+  --primary-accent: #6d28d9; /* Purple accent */
+  --secondary-accent: #60a5fa; /* Blue accent */
+  --text-primary: #2a2a35;
+  --text-secondary: #5c5c71;
+  --highlight-color: #e879f9; /* Pinkish highlight */
+  --shadow-color: #d1d5db99;
+  --surface-color: #e5e7eb;
+  --surface-color2: #e7e9ed;
+  --border-color: #cbd5e1;
+  --border-color2: #dbe5f0;
+  --bg-extra-color: #9ca3af; /* Light blue-grey */
+  --mount-image: url('./assets/m4.png');
+  --star-image: url('./assets/cloud.png');
+  --gold: #6d28d9; /* Purple for light theme */
+  --secondary-accent2: #ffffff;
+}
+
+.dark-theme {
+  --background-color: #0D0C1D;
+  --background-color2: rgba(13, 12, 29, 0.85);
+  --background-color3: rgba(13, 12, 29, 0.95);
+  --primary-accent: #9B5DE5;
+  --secondary-accent: #00BBF9;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CFCFCF;
+  --highlight-color: #F72585;
+  --surface-color: #1E1E2C;
+  --surface-color2: rgba(30, 30, 44, 0.85);
+  --border-color: #3A3A4F;
+  --mount-image: url('./assets/mount-purple.png');
+  --star-image: url('./assets/stars-purple.png');
+  --gold: #FEC89A;
+  --secondary-accent2: #F72585;
+}

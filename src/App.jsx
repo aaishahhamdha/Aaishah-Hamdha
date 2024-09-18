@@ -8,7 +8,9 @@ import Footer from './components/footer/Footer.jsx';
 import Project from './components/Projects/Project.jsx';
 import Skills from './components/Skills/Skills.jsx';
 import Blogs from './components/blogs/Blogs.jsx'
-import Endorsements from './components/endorsements/Education.jsx';
+import About from "./components/about/about.jsx"
+
+
 import './App.scss';
 
 
@@ -19,7 +21,7 @@ const App = () => {
           <BrowserRouter>
       <div className="container-xl"><Navbar /></div>
       <div className="sec" id="Hero"><Hero /></div>
-      <div className="sec" id="Hero2"><Endorsements /></div>
+      <div className="sec" id="About"><About /></div>
       <div className="sec" id="Projects"><Project /></div>
       <div className="sec" id="Skills"><Skills /></div>
      

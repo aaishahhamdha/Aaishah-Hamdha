@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import { Modal } from 'antd'; // Using Ant Design for the modal
+import { Modal } from 'antd'; 
 import './project.scss';
 import hw from '../../assets/mactim.png';
 import sw from '../../assets/sw.png';
 import port from '../../assets/port.png';
 import price from '../../assets/price.png';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css'; 
 
 const projects = [
   { 
@@ -38,7 +40,7 @@ const projects = [
     tech: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio , Bright Data', 
     tech2: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio , Bright Data',
     details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices.', 
-    contribution: 'Full devolopment', 
+    contribution: 'Full development', 
     link: '' 
   },
   { 
@@ -49,11 +51,10 @@ const projects = [
     tech: 'ReactJs', 
     tech2: 'ReactJs', 
     details: 'A fully responsive personal portfolio website featuring key sections such as Hero, About, Skills, Projects, Services, and Contact. The site includes smooth scrolling navigation for a seamless user experience, customizable dark/light mode options, and is optimized for flawless interaction across all devices.', 
-    contribution: 'Full devolopment', 
+    contribution: 'Full development', 
     link: '' 
   },
 ];
-
 
 const chunkArray = (array, chunkSize) => {
   const result = [];
@@ -70,11 +71,12 @@ const Project = () => {
   const tiltRefs = useRef([]);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); 
     tiltRefs.current.forEach(ref => {
       if (ref) {
         VanillaTilt.init(ref, {
           max: 25,
-          speed: 400,
+          speed: 300,
           glare: true,
           "max-glare": 0.5,
         });
@@ -102,7 +104,13 @@ const Project = () => {
         {chunkedProjects.map((row, rowIndex) => (
           <div className='row' key={rowIndex}>
             {row.map((item, index) => (
-              <div className='card' key={item.id} ref={el => tiltRefs.current[index + rowIndex * 4] = el}>
+              <div
+                className='card'
+                key={item.id}
+                ref={el => tiltRefs.current[index + rowIndex * 4] = el}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className='title'>{item.name}</div>
                 <div className='image-card'>
                   <img src={item.imgsrc} alt={item.name} />
@@ -117,7 +125,7 @@ const Project = () => {
           </div>
         ))}
 
-        {/* Modal for project details */}
+       
         {activeProject && (
           <Modal
             title={activeProject.name}

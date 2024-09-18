@@ -1,10 +1,9 @@
 .footer {
   background-color: var(--background-color);
   color: var(--text-primary);
-  padding: 20px;
+  padding: 40px 20px; 
   text-align: center;
   font-size: 1rem;
-  
 }
 
 .footer-content {
@@ -32,7 +31,7 @@
 }
 
 .footer-socials a {
-  color: var(--text-primary); /* Fixed typo */
+  color: var(--text-primary); 
   margin: 0 10px;
   font-size: 1.5rem;
   transition: color 0.3s ease;
@@ -53,11 +52,11 @@
   color: var(--secondary-color);
 }
 
-/* Responsive Styles */
+
 @media screen and (max-width: 600px) {
   .footer {
       font-size: 0.9rem;
-      padding: 15px;
+      padding: 30px 15px; 
   }
 
   .footer-links {
@@ -83,11 +82,11 @@
   }
 }
 
-/* Adjustments for very small screens */
+
 @media screen and (max-width: 458px) {
   .footer {
       font-size: 0.8rem;
-      padding: 10px;
+      padding: 25px 10px; 
   }
 
   .footer-links a {

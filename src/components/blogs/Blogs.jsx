@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import VanillaTilt from 'vanilla-tilt';
-import "./Blogs.css";
+import './Blogs.css';
 import blog1 from '../../assets/blog1.webp';
 import blog2 from '../../assets/blog2.webp';
 import blog3 from '../../assets/blog3.webp';
@@ -76,7 +78,12 @@ const BlogCard = ({ post }) => {
   }, []);
 
   return (
-    <div ref={tiltRef} className='blog-card'>
+    <div
+      ref={tiltRef}
+      className='blog-card'
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div className='svg-border'>
         <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
           <rect
@@ -98,19 +105,21 @@ const BlogCard = ({ post }) => {
 };
 
 const Blogs = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <section className='blog-sec'>
       <h1 className='projects-title'>My Writings</h1>
-      <div className="button-container">
-      <a href="https://medium.com/@aaishamdha" className="hero-button">Go to My Profile</a></div>
-      <hr className='hr'/>
       <div className='blog-container'>
         {blogPosts.map((post, index) => (
           <BlogCard key={index} post={post} />
         ))}
       </div>
+      <hr className='hr' />
     </section>
   );
-}
+};
 
 export default Blogs;

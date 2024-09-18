@@ -1,13 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import VanillaTilt from 'vanilla-tilt';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Skills.css';
 
-import pmImg from '../../assets/pm.png';
-import leadershipImg from '../../assets/lead.jpeg';
-import timeManagementImg from '../../assets/time.png';
-import problemSolvingImg from '../../assets/ps.jpeg';
-import effectiveCommunicationImg from '../../assets/com.jpeg';
-import criticalThinkingImg from '../../assets/crit.jpeg';
-import StressManagementImg from '../../assets/stress.png';
+
 
 
 import javaImg from '../../assets/javaImg.svg';
@@ -15,86 +12,107 @@ import cImg from '../../assets/cImg.png';
 import pythonImg from '../../assets/pythonImg.png';
 import jsImg from '../../assets/jsImg.png';
 import reactImg from '../../assets/reactImg.png';
+import htmlImg from '../../assets/html.jpg';
+import cssImg from '../../assets/css.webp';
 import djangoImg from '../../assets/djangoImg.svg';
 import nodeImg from '../../assets/nodejs.png';
-import sql from '../../assets/mysqlImg.png';
+import mysqlImg from '../../assets/mysqlImg.png';
+import sqliteImg from '../../assets/sqlite.png';
+import mssqlImg from '../../assets/mssql.png';
 import postmanImg from '../../assets/postman.png';
+import insomniaImg from '../../assets/insomnia.png';
 import figmaImg from '../../assets/figmaImg.png';
 import gimpImg from '../../assets/gimp.png';
 import photoshopImg from '../../assets/ps.svg.png';
 import canvaImg from '../../assets/canva.webp';
 import blenderImg from '../../assets/blender.png';
+import vsCodeImg from '../../assets/vscode.png';
+import intelliJImg from '../../assets/intellij.png';
+import gitImg from '../../assets/git.png';
+import githubImg from '../../assets/github.jpg';
 
-const technicalSkills = [
-  { id: 8, imgSrc: javaImg, name: 'Java' },
-  { id: 9, imgSrc: cImg, name: 'C Programming ' },
-  { id: 10, imgSrc: pythonImg, name: 'Python ' },
-  { id: 11, imgSrc: jsImg, name: 'JavaScript ' },
-  { id: 12, imgSrc: reactImg, name: 'React ' },
-  { id: 13, imgSrc: djangoImg, name: 'Django' },
-  { id: 14, imgSrc: nodeImg, name: 'Node.js (Advanced)' },
-  { id: 15, imgSrc: sql, name: 'MySQL' },
-  { id: 16, imgSrc: postmanImg, name: 'Postman' },
-  { id: 17, imgSrc: figmaImg, name: 'Figma' },
-  { id: 18, imgSrc: gimpImg, name: 'GIMP' },
-  { id: 19, imgSrc: photoshopImg, name: 'Photoshop' },
-  { id: 20, imgSrc: canvaImg, name: 'Canva' },
-  { id: 21, imgSrc: blenderImg, name: 'Blender' },
-];
-
-
-const professionalSkills = [
-  { id: 1, imgSrc: pmImg, name: 'Project Management' },
-  { id: 2, imgSrc: leadershipImg, name: 'Leadership/ Teamwork' },
-  { id: 3, imgSrc: timeManagementImg, name: 'Time Management' },
-  { id: 4, imgSrc: problemSolvingImg, name: 'Problem Solving' },
-  { id: 5, imgSrc: effectiveCommunicationImg, name: 'Effective Communication' },
-  { id: 6, imgSrc: criticalThinkingImg, name: 'Critical Thinking' },
-  { id: 7, imgSrc: StressManagementImg, name: 'Stress Management' },
-];
-
-const getRandomDelay = () => Math.floor(Math.random() * 5) + 1; // Random delay between 1s and 6s
+const technicalSkills = {
+  "Programming Languages": [
+    { id: 1, imgSrc: javaImg, name: 'Java' },
+    { id: 2, imgSrc: cImg, name: 'C' },
+    { id: 3, imgSrc: pythonImg, name: 'Python' },
+    { id: 4, imgSrc: jsImg, name: 'JavaScript' }
+  ],
+  "Web Development": [
+    { id: 5, imgSrc: reactImg, name: 'React' },
+    { id: 6, imgSrc: htmlImg, name: 'HTML' },
+    { id: 7, imgSrc: cssImg, name: 'CSS' },
+    { id: 8, imgSrc: djangoImg, name: 'Django' },
+    { id: 9, imgSrc: jsImg, name: 'JavaScript' },
+    { id: 10, imgSrc: nodeImg, name: 'Node.js' },
+  ],
+  "Database": [
+    { id: 12, imgSrc: mysqlImg, name: 'MySQL' },
+    { id: 13, imgSrc: sqliteImg, name: 'SQLite' },
+    { id: 14, imgSrc: mssqlImg, name: 'MsSQL' },
+  ],
+  "Version Control": [
+    { id: 27, imgSrc: gitImg, name: 'Git' },
+    { id: 28, imgSrc: githubImg, name: 'Github' }
+  ],
+  "Testing": [
+    { id: 17, imgSrc: postmanImg, name: 'Postman' },
+    { id: 18, imgSrc: insomniaImg, name: 'Insomnia' }
+  ],
+  "IDE": [
+    { id: 25, imgSrc: vsCodeImg, name: 'VSCode' },
+    { id: 26, imgSrc: intelliJImg, name: 'IntelliJ' }
+  ],
+  "Design": [
+    { id: 19, imgSrc: figmaImg, name: 'Figma' },
+    { id: 20, imgSrc: gimpImg, name: 'GIMP' },
+    { id: 21, imgSrc: photoshopImg, name: 'Photoshop' },
+    { id: 22, imgSrc: canvaImg, name: 'Canva' },
+    { id: 23, imgSrc: blenderImg, name: 'Blender' },
+  ],
+};
 
 const Skills = () => {
+  const categoryRefs = useRef([]);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    categoryRefs.current.forEach(ref => {
+      if (ref) {
+        VanillaTilt.init(ref, {
+          max: 25,
+          speed: 300,
+          glare: true,
+          "max-glare": 0.5,
+        });
+      }
+    });
+  }, []);
+
   return (
     <section className='skills'>
-      <div className='projects-title'>What I Do Best</div>
+      <div className='projects-title'>My Skills</div>
       <div className='skills-container'>
-        <div className='tech'>
-        <div className="button-container">
-          <h2 className='hero-button'> Technical Skills</h2>
-          </div>
-          <div className='skill-grid'>
-            {technicalSkills.map(skill => (
-              <div
-                className='skill-card'
-                key={skill.id}
-                style={{ animationDelay: `${getRandomDelay()}s` }}
-              >
-                <img src={skill.imgSrc} alt={skill.name} className='skillimg' />
-                <p className='skillname'>{skill.name}</p>
+        {Object.entries(technicalSkills).map(([category, skills], index) => (
+          <div
+            className='skill-category-card'
+            key={category}
+            data-aos="fade-up"
+            ref={el => categoryRefs.current[index] = el}
+          >
+            <div className="skill-category">
+              <h2 className='category'>{category}</h2>
+              <div className='skill-grid'>
+                {skills.map(skill => (
+                  <div className='skill-card' key={skill.id} aria-label={skill.name}>
+                    <img src={skill.imgSrc} alt={skill.name} className='skillimg' />
+                    <p className='skillname'>{skill.name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      
-        <div className='prof'>
-        <div className="button-container">
-          <h2 className='hero-button'>Professional Skills</h2>
-          </div>
-          <div className='skill-grid'>
-            {professionalSkills.map(skill => (
-              <div
-                className='skill-card'
-                key={skill.id}
-                style={{ animationDelay: `${getRandomDelay()}s` }}
-              >
-                <img src={skill.imgSrc} alt={skill.name} className='skillimg' />
-                <p className='skillname'>{skill.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

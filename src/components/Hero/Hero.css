@@ -1,84 +1,89 @@
 .hero-section {
-  background-image: linear-gradient(165deg, var(--bg-extra-color), var(--background-color), var(--background-color));
+  background-image: linear-gradient(165deg, var(--bg-extra-color), var(--bg-extra-color2), var(--background-color), var(--background-color), var(--background-color));
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Reduced min-height */
-  padding: 0 15px; /* Reduced padding */
+  min-height: 100vh;
+  padding: 0 15px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px; /* Reduced container width */
+  max-width: 1000px;
   flex-wrap: wrap;
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .text-content {
   flex: 1;
   color: var(--text-primary);
-  max-width: 600px; /* Further reduced text content width */
-  text-align: center;
+  max-width: 600px;
+  text-align: left;
 }
 
 .name1 {
-  font-size: clamp(3rem, 5vw, 2.2rem); /* Reduced font size */
+  font-size: clamp(3rem, 5vw, 2.2rem);
   font-weight: bold;
-  color: var(--gold);
+  color: var(--text-primary);
 }
 
 .name2 {
-  font-size: clamp(2.5rem, 5vw, 2.2rem); /* Reduced font size */
+  font-size: clamp(2.5rem, 5vw, 2.2rem);
   font-weight: bold;
   color: var(--text-primary);
 }
 
 .title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Reduced font size */
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   color: var(--secondary-accent);
-  margin-bottom: 20px; /* Reduced margin */
-  height: 2rem; /* Reduced height */
-  line-height: 2rem; /* Align text vertically */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Reduced font size */
-  color: var(--text-primary);
-  margin-bottom: 15px; /* Reduced margin */
+  margin-bottom: 15px;
   height: 2rem;
   line-height: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  min-height: 50px;
+}
+
+.title2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  height: 2rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .about {
-  font-size: 1.1rem; /* Reduced font size */
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  line-height: 1.5; /* Reduced line height */
-  padding: 0.7rem;
+  line-height: 1.5;
+  padding: 0.7rem 0;
+  text-align: justify;
 }
 
 .button-container {
-  margin-top: 25px; /* Reduced margin */
+  margin-top: 25px;
   display: flex;
-  gap: 15px; /* Reduced gap */
-  justify-content: center;
+  gap: 15px;
+  justify-content: left;
 }
 
 .hero-button {
-  padding: 8px 20px; /* Reduced padding */
+  padding: 8px 20px;
   border: 2px solid var(--gold);
-  border-radius: 40px; /* Reduced border-radius */
+  border-radius: 40px;
   color: var(--gold);
   background: transparent;
-  font-size: 1rem; /* Reduced font size */
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -106,16 +111,16 @@
 
 .hero-button:hover {
   color: var(--text-primary);
-  transform: scale(1.03); /* Slightly smaller hover effect */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+  transform: scale(1.03);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:active {
-  transform: scale(0.97); /* Smaller click effect */
+  transform: scale(0.97);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 
-.image-container {
+.dp-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -123,124 +128,65 @@
 }
 
 .profile-image {
-  width: clamp(220px, 40vw, 360px); /* Reduced image size */
+  width: clamp(220px, 40vw, 360px);
   height: auto;
   object-fit: cover;
+  border-radius: 50%;
+  animation: fadeIn 2s ease-in-out, glow 1.5s infinite alternate;
+  box-shadow: 0 0 10px #a760ff;
 }
 
-  
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .hero-section {
-      padding: 0 30px;
-    }
-  
-    .hero-container {
-      flex-direction: column;
-    }
-  
-    .text-content {
-      max-width: 650px;
-    }
-  
-    .name1 {
-      font-size: clamp(3.2rem, 6.5vw, 6rem);
-    }
-    .name2 {
-        font-size: clamp(3.2rem, 6.5vw, 6rem);
-      }
-  
-    .title {
-      font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-      margin-bottom: 22px;
-    }
-    .title2 {
-        font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-        margin-bottom: 22px;
-      }
-  
-    .about {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  
-    .button-container {
-      margin-top: 30px;
-      gap: 20px;
-    }
-  
-    .hero-button {
-      padding: 12px 28px;
-      font-size: 1rem;
-    }
-  
-    .profile-image {
-      margin-top: 30px;
-      width: clamp(250px, 45vw, 350px);
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  
-  @media screen and (min-width: 1024px) {
-    .hero-section {
-      padding: 0 25px; /* Further reduced padding */
-    }
-    
-    .hero-container {
-      max-width: 1000px; /* Further reduced max-width */
-    }
-    
-    .text-content {
-      max-width: 620px; /* Further reduced text content width */
-    }
-    
-    .name1 {
-      font-size: clamp(4rem, 6.5vw, 3rem); /* Further reduced font size */
-    }
-    
-    .name2 {
-      font-size: clamp(3rem, 6.5vw, 3rem); /* Further reduced font size */
-    }
-    
-    .title {
-      font-size: clamp(1.7rem, 3vw, 2.2rem); /* Further reduced font size */
-      margin-bottom: 20px; /* Further reduced margin */
-    }
-    
-    .title2 {
-      font-size: clamp(1.7rem, 3vw, 2.2rem); /* Further reduced font size */
-      margin-bottom: 20px; /* Further reduced margin */
-    }
-    
-    .about {
-      font-size: 1.1rem; /* Further reduced font size */
-      line-height: 1.5; /* Further reduced line height */
-    }
-    
-    .button-container {
-      margin-top: 30px; /* Further reduced margin */
-      gap: 18px; /* Further reduced gap */
-    }
-    
-    .hero-button {
-      padding: 12px 28px; /* Further reduced padding */
-      font-size: 0.9rem; /* Further reduced font size */
-      border: 1.7px solid var(--gold);
-    }
-    
-    .profile-image {
-      width: clamp(260px, 45vw, 400px); /* Further reduced image size */
-    }
-    
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-/* For smallest mobile screens below 450px */
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(167, 96, 255, 0.6);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(167, 96, 255, 0.9);
+  }
+}
+
 @media screen and (max-width: 450px) {
-    .hero-button {
-      padding: 8px 20px; 
-      font-size: 0.8rem; 
-    }
-  
-    .button-container {
-      gap: 10px; /* Smaller gap between buttons */
-    }
+  .profile-image {
+    width: 80vw;
+    margin-top: 1rem;
+    animation: fadeIn 2s ease-in-out, glow 1.5s infinite alternate;
   }
-  
+
+  .dp-container {
+    margin-top: 5rem;
+  }
+
+  .text-content {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .title, .title2 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .title2 {
+    padding-top: 20px;
+  }
+}

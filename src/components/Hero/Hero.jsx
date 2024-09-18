@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import StyledStarsCanvas from './bg.jsx';
 import './Hero.css';
-
+import dp from "../../assets/aaishah.jpg"
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const heroRef = useRef(null);
   const textRef = useRef(null);
-  const texts = [
-    "IT Undergraduate",
-    "Aspiring Software Engineer",
-    "Explorer"
-  ];
-  const speed = 50; // Typing speed in milliseconds
-  const delay = 1000; // Delay before starting to erase
+  const texts = ["IT Undergraduate", "Aspiring Software Engineer", "Explorer"];
+  const speed = 50; 
+  const delay = 1000; 
 
   useEffect(() => {
     setIsLoaded(true);
@@ -69,22 +68,36 @@ const Hero = () => {
   }, [isLoaded]);
 
   return (
-    <section className="hero-section">
-      <div className="hero-container">
+    <section className="hero-section" ref={heroRef}>
+      <StyledStarsCanvas />
+      
+      <motion.div 
+        className="hero-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >  
+                <div className="dp-container">
+          <img src={dp} alt="Profile" className="profile-image" />
+        </div>
         <div className="text-content">
           <h2 className="title2">Hey there!</h2>
-         
-          <h1 className="name1"> <hi className="name2">It's</hi> Aaishah Hamdha</h1>
-          <h2 className="title" ref={textRef}></h2> 
+          <h1 className="name1"><span className="name2">It's</span> Aaishah Hamdha</h1>
+          <h2 className="title" ref={textRef}></h2>
           <p className="about">
-            Self-motivated and passionate about tech, I thrive on solving challenges and exploring innovative solutions. I’m eager to apply my skills in impactful ways.
+          I am a quick-learner, a strong communicator and a problem solver
+fascinated by the potential of technology to reshape reality. I aspire to
+become an impactful Software Engineer , eager to expand my skillset
+through mentorship from experienced mentors and live projects, and
+am excited to contribute my enthusiasm and skills to a dynamic team.
           </p>
           <div className="button-container">
             <a href="/Resume.pdf" className="hero-button" target="_blank" rel="noopener noreferrer">View Resume</a>
-            <a href="#Projects" className="hero-button">Show My Work</a>
+            
           </div>
         </div>
-      </div>
+
+      </motion.div>
     </section>
   );
 };

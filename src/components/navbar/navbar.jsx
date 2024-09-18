@@ -27,7 +27,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Detect clicks outside the menu to close it
+ 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -60,7 +60,7 @@ const Navbar = () => {
       </div>
       <div className='nav-right' ref={menuRef}>
         <ul className={`links ${menuOpen ? 'active' : ''}`}>
-          <li><Link smooth to="#Hero" className='nav-item'>About</Link></li>
+          <li><Link smooth to="#About" className='nav-item'>About</Link></li>
           <li><Link smooth to="#Projects" className='nav-item'>Projects</Link></li>
           <li><Link smooth to="#Skills" className='nav-item'>Skills</Link></li>
           <li><Link smooth to="#blogs" className='nav-item'>Blogs</Link></li>

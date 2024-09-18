@@ -1,4 +1,4 @@
-/* Default navbar styling (for large screens) */
+
 .navbar {
   width: 60%;
   height: 3.5rem;
@@ -89,7 +89,7 @@
   }
 
   .links {
-    display: none; /* Hide by default, activated by hamburger */
+    display: none; 
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -144,7 +144,7 @@
  
 }
 
-/* Media query for devices between 600px and 768px */
+
 @media (min-width: 600px) and (max-width: 1024px) {
   .navbar {
     width: 80%;
@@ -165,15 +165,15 @@
   }
 
   .hamburger {
-    display: none; /* Hide hamburger icon */
+    display: none; 
   }
 
   .links {
-    display: flex; /* Show links normally */
+    display: flex; 
   }
 }
 
-/* Media query for devices below 600px */
+
 @media (max-width: 600px) {
   .navbar {
     height: 4rem;
@@ -198,15 +198,15 @@
   }
 
   .hamburger {
-    display: block; /* Show hamburger icon on small screens */
+    display: block; 
   }
 
   .links {
-    display: none; /* Mobile dropdown menu */
+    display: none; 
   }
 
   .links.active {
-    display: flex; /* Activated by hamburger icon */
+    display: flex; 
   }
 }
 

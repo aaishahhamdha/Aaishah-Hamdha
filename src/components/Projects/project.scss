@@ -1,6 +1,6 @@
 
 .projects-area {
-  background-image: linear-gradient(180deg,var(--bg-extra-color),var(--bg-extra-color),var(--background-color) );
+  background-image: linear-gradient(180deg,var(--bg-extra-color),var(--bg-extra-color2),var(--background-color) );
 
   display: flex;
   flex-direction: column;
@@ -28,9 +28,9 @@
   box-shadow: 0 8px 16px var(--shadow-color);
   margin: 8px;
   padding: 17px;
-  width: 215px; /* Increased width */
+  width: 215px; 
   min-height: max-content;
-  height: 340px; /* Increased height */
+  height: 340px; 
   text-align: center;
   color: var(--text-primary);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -38,7 +38,7 @@
 }
 
 .card .image-card {
-  height: 50%; /* Increased image height proportionally */
+  height: 50%; 
   overflow: hidden;
   border-radius: 7px;
   margin-bottom: 8px;
@@ -55,7 +55,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--primary-accent);
+  color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
@@ -94,14 +94,11 @@
 }
 
 .card .link a {
-  color: var(--secondary-accent);
+
   font-size: 1rem;
   transition: color 0.3s;
 }
 
-.card .link a:hover {
-  color: var(--highlight-color);
-}
 
 
 .read-more2 {
@@ -125,13 +122,13 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards */
+    justify-content: center; 
   }
 
   .card {
-    width: calc(50% - 20px); /* Two cards per row with spacing */
+    width: calc(50% - 20px); 
     height: 200px;
-    margin: 10px; /* Adjust margin as needed */
+    margin: 10px; 
   }
 
   .projects {
@@ -182,35 +179,33 @@
 
 
 
-/* In your project.scss or another CSS/SCSS file */
 
-/* Custom Modal Styles */
 .custom-modal .ant-modal-content {
-  background-color: var(--background-color); /* Use root color */
-  color: var(--text-color); /* Use root text color */
+  background-color: var(--background-color); 
+  color: var(--text-color); 
 }
 
 .custom-modal .ant-modal-header {
-  background-color: var(--surface-color); /* Use root color */
-  color: var(--text-primary); /* Use root color */
+  background-color: var(--surface-color);
+  color: var(--text-primary); 
 }
 
 .custom-modal .ant-modal-title {
-  font-size: 1.5rem; /* Custom title font size */
+  font-size: 1.5rem; 
 }
 
 .custom-modal .ant-modal-footer {
-  background-color: var(--background-color); /* Use root color */
+  background-color: var(--background-color); 
 }
 
 .custom-modal .ant-btn {
-  background-color: var(--highlight-color); /* Use root color */
-  color: var(--button-text); /* Use root color */
+  background-color: var(--highlight-color); 
+  color: var(--button-text);
 }
 
 .custom-modal .ant-btn:hover {
-  background-color: var(--secondary-accent); /* Use root color */
-  color: var(--button-hover-text); /* Use root color */
+  background-color: var(--secondary-accent);
+  color: var(--button-hover-text); 
 }
 
 
