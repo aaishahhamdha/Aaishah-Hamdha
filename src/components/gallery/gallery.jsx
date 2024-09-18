@@ -7,7 +7,7 @@ import Fit21_3 from "../../assets/gallery/fit21 3.jpeg";
 import FreshersInauguration from "../../assets/gallery/freshers inauguration.jpeg";
 import Choir from "../../assets/gallery/choir.jpeg";
 import Magazine from "../../assets/gallery/magazine.jpeg";
-import Pref from "../../assets/gallery/pref.jpeg";
+
 import Prefect from "../../assets/gallery/prefect.jpeg";
 import Sports from "../../assets/gallery/sports.png";
 import Sports2 from "../../assets/gallery/sports.2.jpeg";
@@ -20,7 +20,7 @@ const photos = [
   { title: 'Fit21 Level 1', src: Fit21_3 },
   { title: 'Freshers Inauguration- CLC', src: FreshersInauguration },
   { title: 'School Choir-BCC', src: Choir },
-  { title: 'Prefects Orientation - CLC', src: Pref },
+
   { title: 'Prefects Guild-CLC', src: Prefect },
   { title: 'Sports Meet 2019-Vice House captain', src: Sports },
   { title: 'Fit21 Level 2', src: Fit21_2 },

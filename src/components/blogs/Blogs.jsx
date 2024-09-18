@@ -113,11 +113,12 @@ const Blogs = () => {
   return (
     <section className='blog-sec'>
       <h1 className='projects-title'>My Writings</h1>
-      <hr className='hr' />
       <div className="button-container2">
             <a href="https://github.com/aaishahhamdha"  className="hero-button" target="_blank" rel="noopener noreferrer">Go to my profile</a>
             
           </div>
+      <hr className='hr' />
+    
       <div className='blog-container'>
         {blogPosts.map((post, index) => (
           <BlogCard key={index} post={post} />
