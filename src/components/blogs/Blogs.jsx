@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import VanillaTilt from 'vanilla-tilt';
 import './Blogs.css';
+import '../../App.scss'
 import blog1 from '../../assets/blog1.webp';
 import blog2 from '../../assets/blog2.webp';
 import blog3 from '../../assets/blog3.webp';
@@ -112,12 +113,17 @@ const Blogs = () => {
   return (
     <section className='blog-sec'>
       <h1 className='projects-title'>My Writings</h1>
+      <hr className='hr' />
+      <div className="button-container2">
+            <a href="https://github.com/aaishahhamdha"  className="hero-button" target="_blank" rel="noopener noreferrer">Go to my profile</a>
+            
+          </div>
       <div className='blog-container'>
         {blogPosts.map((post, index) => (
           <BlogCard key={index} post={post} />
         ))}
       </div>
-      <hr className='hr' />
+     
     </section>
   );
 };

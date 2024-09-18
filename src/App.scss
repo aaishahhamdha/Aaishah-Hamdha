@@ -160,7 +160,6 @@ a {
   }
 }
 
-
 .hero-button2 {
   padding: 8px 20px; 
   border: 2px solid var(--gold); 
@@ -197,20 +196,19 @@ a {
   color: var(--text-primary);
   transform: scale(1.03); 
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
 
 .hero-button2:active {
   transform: scale(0.97); 
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); 
 }
 
-
 .button-container2 {
   margin-top: 25px;
   display: flex;
-  gap: 15px; 
+  gap: 15px;
   justify-content: center;
 }
-
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-button2{
@@ -223,7 +221,6 @@ a {
     gap: 20px; 
   }
 }
-
 
 @media screen and (min-width: 1024px) {
   .hero-button2 {
@@ -238,7 +235,6 @@ a {
   }
 }
 
-
 @media screen and (max-width: 450px) {
   .hero-button2 {
     padding: 8px 20px; 
@@ -248,6 +244,4 @@ a {
   .button-container2 {
     gap: 10px; 
   }
-}
-
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Education.css';
-import uom from "../../assets/bcc.jpg";
+import uom from "../../assets/uom.jpeg";
 import clc from "../../assets/clc.jpeg";
 import bcc from "../../assets/bcc.jpg";
 import gzc from "../../assets/gzc.jpeg";
