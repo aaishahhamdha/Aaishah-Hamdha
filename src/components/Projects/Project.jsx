@@ -43,17 +43,18 @@ const projects = [
     contribution: 'Full development', 
     link: '' 
   },
-  { 
+  {
     id: 4, 
     imgsrc: port, 
     name: 'Portfolio', 
-    description: 'Responsive personal website', 
-    tech: 'ReactJs', 
-    tech2: 'ReactJs', 
-    details: 'A fully responsive personal portfolio website featuring key sections such as Hero, About, Skills, Projects, Services, and Contact. The site includes smooth scrolling navigation for a seamless user experience, customizable dark/light mode options, and is optimized for flawless interaction across all devices.', 
+    description: 'Responsive 3D personal website', 
+    tech: 'ReactJs, ThreeJs', 
+    tech2: 'ReactJs, ThreeJs', 
+    details: 'A fully responsive 3D personal portfolio website featuring sections like Hero, About, Skills, Projects, Services, and Contact. The site offers smooth scrolling navigation for a seamless experience, supports customizable dark/light mode, and is optimized for flawless interaction across all devices.', 
     contribution: 'Full development', 
     link: '' 
-  },
+  }
+  
 ];
 
 const chunkArray = (array, chunkSize) => {
