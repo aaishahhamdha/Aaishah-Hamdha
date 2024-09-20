@@ -92,7 +92,7 @@ through mentorship from experienced mentors and live projects, and
 am excited to contribute my enthusiasm and skills to a dynamic team.
           </p>
           <div className="button-container">
-            <a href="/resume.pdf" className="hero-button" target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a href="https://drive.google.com/file/d/1Z-TWlF3wbC8gJIIS7yv2lh4SrO2KNkWU/view?usp=sharing" className="hero-button" target="_blank" rel="noopener noreferrer">View Resume</a>
             
           </div>
         </div>
