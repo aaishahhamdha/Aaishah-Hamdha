@@ -19,7 +19,7 @@
 }
 
 .skill-category-card {
-  background-color: var(--surface-color3);
+  background-color: var(--surface-color);
   backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px var(--shadow-color);

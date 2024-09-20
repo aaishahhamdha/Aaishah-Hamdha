@@ -23,12 +23,13 @@ const photos = [
 
   { title: 'Prefects Guild-CLC', src: Prefect },
   { title: 'Sports Meet 2019-Vice House captain', src: Sports },
-  { title: 'Fit21 Level 2', src: Fit21_2 },
-  { title: 'Sports Meet 2019-Vice House captain', src: Sports2 },
-  { title: 'Level 2 Project Team', src: SecondYearProject },
   { title: 'Sceince Magazine Launch', src: Magazine },
   { title: 'WSO2 - Company Visit', src: WSO2 },
   { title: 'Annual Day 2018 - CLC', src: Announce },
+  { title: 'Fit21 Level 2', src: Fit21_2 },
+  { title: 'Sports Meet 2019-Vice House captain', src: Sports2 },
+  { title: 'Level 2 Project Team', src: SecondYearProject },
+ 
  
 ];
 

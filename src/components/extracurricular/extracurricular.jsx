@@ -17,6 +17,7 @@ import OutstandingStudent from '../../assets/extra/mostout.jpeg';
 import TamilLiteraryDay from '../../assets/extra/poem.jpeg';
 import SpeechSinhala from '../../assets/extra/sinhala3.jpeg';
 import CodeGladiators from '../../assets/extra/Code gladiators.png';
+import Hackmoral from '../../assets/extra/hackmoral.png';
 
 const variants = {
     hidden: { opacity: 0, y: 20 },
@@ -27,9 +28,14 @@ const Extracurricular = () => {
     const [expandedImage, setExpandedImage] = useState(null);
 
     const achievements = [
+        
         {
             title: 'Code Gladiators-2024 Semi Finalist',
             image: CodeGladiators,
+        },
+        {
+            title: 'Hackmoral 6.O-2024 INTECS',
+            image: Hackmoral,
         },
         {
             title: 'All Island 1st - Oratory (English)',

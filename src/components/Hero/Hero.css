@@ -128,7 +128,7 @@
 }
 
 .profile-image {
-  width: clamp(220px, 40vw, 360px);
+  width: clamp(230px, 40vw, 400px);
   height: auto;
   object-fit: cover;
   border-radius: 50%;
