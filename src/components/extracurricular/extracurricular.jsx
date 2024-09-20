@@ -34,7 +34,7 @@ const Extracurricular = () => {
             image: CodeGladiators,
         },
         {
-            title: 'Hackmoral 6.O-2024 INTECS',
+            title: 'Hackmoral 6.0 -2024 INTECS',
             image: Hackmoral,
         },
         {
