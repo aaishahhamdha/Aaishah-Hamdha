@@ -25,14 +25,15 @@ const educationDetails = [
     "I am currently reading a Bachelor of Science with Honours in Information Technology at the University of Moratuwa. I have completed 4 semesters and am currently in my third year. The course includes modules such as Data Structures and Algorithms (A+), Object-Oriented Programming (A+), Database Management Systems(pending), Software Engineering (A), Operating Systems (A+),, Object Oriented Analysis and Design (A+), Computer Networks(pending), and Artificial Intelligence(ongoing) among others."
   },
   {
-    institution: "Ceylon Ladies’ Campus, Warakapola",
-    duration: "2018-2020",
-    degree: "GCE AL - Bio Science",
-    grades: "Phy- A | Chem- A | Bio- C, Z-Score - 1.8611",
-    image: clc,
-    logo: logo2,
-    description: "Advanced level with 2 A's in Physics and Chemistry, and a C in Biology. I actively participated in various clubs and events, including serving as Vice House Captain for the sports meet, President of the English Literature Association, Magazine Committee President, and Annual Day Announcer for 2018 and 2019. I was also a member of the Science Club and organized many events."
+    "institution": "Ceylon Ladies’ Campus, Warakapola",
+    "duration": "2018-2020",
+    "degree": "GCE AL - Bio Science",
+    "grades": "Phy- A | Chem- A | Bio- C, Z-Score - 1.8611",
+    "image": "clc",
+    "logo": "logo2",
+    "description": "Advanced level with 2 A's in Physics and Chemistry, and a C in Biology. I actively participated in various clubs and events, including serving as Vice House Captain for the sports meet, President of the English Literature Association, Magazine Committee President, and Annual Day Announcer for 2018 and 2019. I was also a member of the Science Club and organized many events. Additionally, I was the student head and was awrded the most outstanding student of the science stream 2018."
   },
+  
   {
     institution: "Baduriya Central College, Mawanella",
     duration: "2014-2017",
