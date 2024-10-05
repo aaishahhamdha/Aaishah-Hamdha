@@ -29,8 +29,8 @@ const educationDetails = [
     "duration": "2018-2020",
     "degree": "GCE AL - Bio Science",
     "grades": "Phy- A | Chem- A | Bio- C, Z-Score - 1.8611",
-    "image": "clc",
-    "logo": "logo2",
+    "image": clc,
+    "logo": logo2,
     "description": "Advanced level with 2 A's in Physics and Chemistry, and a C in Biology. I actively participated in various clubs and events, including serving as Vice House Captain for the sports meet, President of the English Literature Association, Magazine Committee President, and Annual Day Announcer for 2018 and 2019. I was also a member of the Science Club and organized many events. Additionally, I was the student head and was awrded the most outstanding student of the science stream 2018."
   },
   
