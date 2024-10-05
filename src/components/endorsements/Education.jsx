@@ -22,7 +22,7 @@ const educationDetails = [
     image: uom,
     logo: logo1,
     description:
-    "I am currently reading a Bachelor of Science with Honours in Information Technology at the University of Moratuwa. I have completed 4 semesters and am currently in my third year. Ive completed modules such as Data Structures and Algorithms (A+), Object-Oriented Programming (A+), Database Management Systems(pending), Software Engineering (A), Operating Systems (A+), Object Oriented Analysis and Design (A+), Data communication(A), Operating Systems(A+) and Principles of Management(A+) among others in this course."
+    "I am currently reading a Bachelor of Science with Honours in Information Technology at the University of Moratuwa. I have completed 4 semesters and am currently in my third year. Ive completed modules such as Data Structures and Algorithms (A+), Object-Oriented Programming (A+), Database Management Systems(pending), Software Engineering (A), Object Oriented Analysis and Design (A+), Data communication(A), Operating Systems(A+) and Principles of Management(A+) among others in this course."
   },
   {
     "institution": "Ceylon Ladies’ Campus, Warakapola",
