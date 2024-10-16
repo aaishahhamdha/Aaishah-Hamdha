@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faTrophy, faImages } from '@fortawesome/free-solid-svg-icons'; 
-import Edu from '../endorsements/Education.jsx';
+
 import Extra from "../extracurricular/extracurricular.jsx";
 import Gallery from "../gallery/gallery.jsx";
 import './about.css';
