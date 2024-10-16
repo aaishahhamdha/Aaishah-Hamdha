@@ -6,8 +6,12 @@ import hw from '../../assets/mactim.png';
 import sw from '../../assets/sw.png';
 import port from '../../assets/port.png';
 import price from '../../assets/price.png';
+import blogpad from '../../assets/blogpad.png';
+import meal from '../../assets/meal.png';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const projects = [
   { 
@@ -17,8 +21,9 @@ const projects = [
     description: 'A device to Monitor and Control Theft in MotorBikes', 
     tech: 'Arduino, C, GPS, GSM, IR sensor, Accelerometer, LED display, Atmel Studio, Blender, KiCad', 
     tech2: 'Arduino, C, GPS, GSM, IR sensor, Accelerometer, LED display, Atmel Studio, Blender, KiCad', 
-    details: 'The Mactim device features an anti-theft mode activated by a secure button press, detecting falls, theft attempts, and unauthorized ignition, sending alerts with GPS coordinates to the owner. In default mode, it monitors speed to alert riders if they exceed safe limits, promoting responsible riding. Key components include an Arduino Mega 2560, GPS, GSM, IR sensor, LCD 1602, MPU6050 accelerometer, vibration sensors, buzzer, and buttons.',
+    details: 'The Mactim device features an anti-theft mode activated by a secure button press, detecting falls, theft attempts, and unauthorized ignition, sending alerts with GPS coordinates to the owner.',
     contribution: 'Responsible for developing the GSM module for SMS alerts and integrating the IR sensor for speed monitoring.',
+    status: 'Completed',
     link: '' 
   },
   {
@@ -26,10 +31,11 @@ const projects = [
     imgsrc: sw,
     name: 'Dataverse',
     description: 'NLP-based data visualization tool',
-    tech: 'Frontend: React.js | Authentication & Authorization: OAuth | JWT , LLM: OpenAI | LangChain , Backend: Python | Django REST Framework , Database: SQLite , Visualization: Chart.js , API: Django REST Framework (DRF), Postman',
-    tech2: 'React.js , OAuth , OpenAI, LangChain , Django REST Framework , SQLite , Chart.js , Postman',
-    details: 'Key Functionalities: Natural language to SQL query generation, JWT & social login authentication, user management, profile customization, data visualization, database management, collaboration, chat & voice input for queries, admin dashboard.',
-    contribution: 'UI design in Figma, JWT-based traditional and social authentication , role management, profile editing, user & role management, collaboration, database views, natural language to SQL conversion, system module integration, and UI refinement.',
+    tech: 'React.js, OAuth, OpenAI, LangChain, Django REST Framework, SQLite, Chart.js, Postman',
+    tech2: 'React.js, OAuth, OpenAI, LangChain, Django REST Framework, SQLite, Chart.js, Postman',
+    details: 'Key Functionalities: Natural language to SQL query generation, JWT & social login authentication, data visualization, database management, chat & voice input for queries.',
+    contribution: 'UI design, JWT authentication, role management, and natural language to SQL conversion.',
+    status: 'Completed',
     link: ''
   },  
   { 
@@ -37,10 +43,11 @@ const projects = [
     imgsrc: price, 
     name: 'PriceRadar', 
     description: 'Webscraper application to scrape Amazon products', 
-    tech: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio , Bright Data', 
-    tech2: ' NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio , Bright Data',
-    details: 'Features: Web scraper application that scrapes Amazon products and tracks their prices.', 
+    tech: 'NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio, Bright Data', 
+    tech2: 'NextJs, NodeJs, MongoDB, Tailwind CSS, Cheerio, Bright Data',
+    details: 'A web scraper that tracks Amazon product prices.', 
     contribution: 'Full development', 
+    status: 'Completed',
     link: '' 
   },
   {
@@ -50,9 +57,34 @@ const projects = [
     description: 'Responsive 3D personal website', 
     tech: 'ReactJs, ThreeJs', 
     tech2: 'ReactJs, ThreeJs', 
-    details: 'A fully responsive 3D personal portfolio website featuring sections like Hero, About, Skills, Projects, Services, and Contact. The site offers smooth scrolling navigation for a seamless experience, supports customizable dark/light mode, and is optimized for flawless interaction across all devices.', 
+    details: 'A fully responsive 3D personal portfolio website featuring sections like Hero, About, Skills, Projects, and Contact.',
     contribution: 'Full development', 
+    status: 'Completed',
     link: '' 
+  },
+  {
+    id: 5,
+    imgsrc: blogpad, 
+    name: 'Blogpad',
+    description: 'Blog application built using MERN stack',
+    tech: 'MongoDB, Express.js, React.js, Node.js',
+    tech2: 'MongoDB, Express.js, React.js, Node.js',
+    details: 'A full-stack blog application with features like post creation, user authentication, and comments.',
+    contribution: 'Full development',
+    status: 'Ongoing',
+    link: ''
+  },
+  {
+    id: 6,
+    imgsrc: meal, 
+    name: 'Meal Mate',
+    description: 'An employee meal ordering app using React.js, Ballerina, and SQL',
+    tech: 'React.js, Ballerina, SQL',
+    tech2: 'React.js, Ballerina, SQL',
+    details: 'A meal ordering app that allows employees to order meals from a selection of available options and customize their orders',
+    contribution: 'Frontend and backend development',
+    status: 'Ongoing',
+    link: ''
   }
   
 ];
@@ -126,7 +158,6 @@ const Project = () => {
           </div>
         ))}
 
-       
         {activeProject && (
           <Modal
             title={activeProject.name}
@@ -139,6 +170,21 @@ const Project = () => {
             <div className='modal-content'>
               <img src={activeProject.imgsrc} alt={activeProject.name} style={{ width: '100%', marginBottom: '20px' }} />
               <h3>{activeProject.description}</h3>
+              <strong>
+  <span className={`status ${activeProject.status === 'Completed' ? 'completed' : 'ongoing'}`}>
+    {activeProject.status === 'Completed' ? (
+      <>
+        <FontAwesomeIcon icon={faCheckCircle} style={{ marginRight: '8px', color: 'green' }} />
+        <p> {activeProject.status}</p>
+      </>
+    ) : (
+      <>
+        <FontAwesomeIcon icon={faSpinner} spin style={{ marginRight: '8px', color: 'blue' }} />
+        <p> {activeProject.status}</p>
+      </>
+    )}
+  </span>
+</strong>
               <p><strong>Project Details:</strong></p>
               <p>{activeProject.details}</p>
               <p><strong>My contribution:</strong></p>
@@ -149,6 +195,7 @@ const Project = () => {
                   <li key={index}>{tech}</li>
                 ))}
               </ul>
+             
             </div>
           </Modal>
         )}

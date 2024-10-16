@@ -22,7 +22,22 @@ const educationDetails = [
     image: uom,
     logo: logo1,
     description:
-    "I am currently reading a Bachelor of Science with Honours in Information Technology at the University of Moratuwa. I have completed 4 semesters and am currently in my third year. Ive completed modules such as Data Structures and Algorithms (A+), Object-Oriented Programming (A+), Database Management Systems(pending), Software Engineering (A), Object Oriented Analysis and Design (A+), Data communication(A), Operating Systems(A+) and Principles of Management(A+) among others in this course."
+    "I am currently reading a Bachelor of Science with Honours in Information Technology at the University of Moratuwa. I have completed 4 semesters and am currently in my third year.",
+    modules: [
+      { name: "Data Structures and Algorithms", grade: "A+" },
+      { name: "Object-Oriented Programming", grade: "A+" },
+      { name: "Database Management Systems", grade: "A+" },
+      { name: "Software Engineering", grade: "A" },
+      { name: "Object Oriented Analysis and Design", grade: "A+" },
+      { name: "Data communication", grade: "A" },
+      { name: "Operating Systems", grade: "A+" },
+      { name: "Graphic Design", grade: "A" },
+      { name: "Data communication", grade: "A" },
+      { name: "Computer Architecture", grade: "A" },
+      { name: "Statistical Inference", grade: "A+" },
+      { name: "Principles of Management", grade: "A+" },
+      { name: "Fundamentals of Bussiness Economics", grade: "A+" }
+    ]
   },
   {
     "institution": "Ceylon Ladies’ Campus, Warakapola",
@@ -65,7 +80,7 @@ const Education = () => {
 
   return (
     <section className="education-section">
-      <div className='education-wrapper'>
+      <div className="education-wrapper">
         <h1 className="projects-title">My Academic Journey</h1>
         <div className="timeline">
           {educationDetails.map((education, index) => (
@@ -102,11 +117,23 @@ const Education = () => {
                       </>
                   }
                 </span>
-                {expandedIndex === index && <p className="education-description">{education.description}</p>}
+                {expandedIndex === index && (
+                  <div>
+                    <p className="education-description">{education.description}</p>
+                    {education.modules && (
+                      <ul className="education-description">
+                        {education.modules.map((module, idx) => (
+                          <li key={idx}>
+                            {module.name} - <strong>{module.grade}</strong>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
-        
         </div>
       </div>
     </section>
