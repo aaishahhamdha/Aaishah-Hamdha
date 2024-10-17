@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-/* import Navbar from './components/navbar/navbar.jsx';
+
+import Navbar from './components/navbar/navbar.jsx';
+/*
 import Hero from './components/Hero/Hero.jsx';
 
 import Services from './components/services/Services.jsx';
@@ -18,11 +20,12 @@ import './App.scss';
 const App = () => {      
   return (     
     <div className='App'>           
-      <BrowserRouter>       
-        { /*
-        <div className="container-xl">
+      <BrowserRouter>  
+      <div className="container-xl">
           <Navbar />
-        </div>       
+        </div>        
+        { /*
+           
         <div className="sec" id="Hero">
           <Hero />
         </div>       
