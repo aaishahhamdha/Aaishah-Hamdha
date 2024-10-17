@@ -4,9 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.jsx';
 import Hero from './components/Hero/Hero.jsx';
 import Services from './components/services/Services.jsx';
+import Project from './components/Projects/Project.jsx';
 /*
 
-import Project from './components/Projects/Project.jsx';
+
 import Skills from './components/Skills/Skills.jsx';
 
 */
@@ -30,12 +31,13 @@ const App = () => {
           <Hero />
         </div> 
         <div className="sec" id="About">
-        </div>         
-        { /*
-           
+        </div>  
         <div className="sec" id="Projects">
           <Project />
-        </div>       
+        </div>           
+        { /*
+           
+        
         <div className="sec" id="Skills">
           <Skills />
         </div> 
