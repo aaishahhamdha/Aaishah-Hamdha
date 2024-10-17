@@ -31,12 +31,9 @@ const App = () => {
           <Hero />
         </div> 
         <div className="sec" id="About">
-          <About />
         </div>         
         { /*
            
-            
-          
         <div className="sec" id="Projects">
           <Project />
         </div>       
