@@ -62,6 +62,7 @@ const projects = [
     status: 'Completed',
     link: '' 
   },
+
   {
     id: 5,
     imgsrc: blogpad, 
@@ -85,7 +86,9 @@ const projects = [
     contribution: 'Frontend and backend development',
     status: 'Ongoing',
     link: ''
+
   }
+
   
 ];
 
