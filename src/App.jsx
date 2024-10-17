@@ -10,8 +10,9 @@ import Services from './components/services/Services.jsx';
 
 import Project from './components/Projects/Project.jsx';
 import Skills from './components/Skills/Skills.jsx';
-import Blogs from './components/blogs/Blogs.jsx'
+
 */
+import Blogs from './components/blogs/Blogs.jsx'
 import About from "./components/about/about.jsx"
 import Contact from './components/Contacts/contact.jsx';
 import Footer from './components/footer/Footer.jsx';
@@ -39,10 +40,13 @@ const App = () => {
         </div>       
         <div className="sec" id="Skills">
           <Skills />
-        </div>             
+        </div> 
+           */ }            
         <div className="sec" id="blogs">
           <Blogs />
-        </div>       
+        </div>  
+
+        { /*    
         <div className="sec" id="services">
           <Services />
         </div>        
