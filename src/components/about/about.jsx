@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faGraduationCap, faTrophy, faImages } from '@fortawesome/free-solid-svg-icons';
-import Edu from '../endorsements/Education.jsx'; 
+import { faGraduationCap, faTrophy, faImages } from '@fortawesome/free-solid-svg-icons'; 
+
+import Edu from '../endorsements/Education.jsx';
 
 
-/*
+
+
 import Extra from "../extracurricular/extracurricular.jsx";
+/*
 import Gallery from "../gallery/gallery.jsx";*/
 import './about.css';
 
@@ -14,13 +17,18 @@ const About = () => {
     const [activeSection, setActiveSection] = useState('education');
 
 
+
    const renderSection = () => {
+
         switch (activeSection) {
             case 'education':
                 return <Edu />;
-                 /*
+                
             case 'extracurricular':
                 return <Extra />;
+
+
+   /* 
             case 'gallery':
                 return <Gallery />;*/
             default:
@@ -28,14 +36,10 @@ const About = () => {
         }
     };
 
+
     return (
         <div className="about-container">
             <div className="menu">
-
-
-    return (
-        <div className="about-container">
-           <div className="menu">
 
                 <FontAwesomeIcon
                     icon={faGraduationCap}
@@ -44,7 +48,7 @@ const About = () => {
                     className={`fa-icon menu-item ${activeSection === 'education' ? 'active' : ''}`}
                 />
 
-                {/*
+            
 
                 <FontAwesomeIcon
                     icon={faTrophy}
@@ -52,7 +56,7 @@ const About = () => {
                     onClick={() => setActiveSection('extracurricular')}
                     className={`fa-icon menu-item ${activeSection === 'extracurricular' ? 'active' : ''}`}
                 />
-                <FontAwesomeIcon
+                {/*  <FontAwesomeIcon
                     icon={faImages}
                     size="2x"
                     onClick={() => setActiveSection('gallery')}
