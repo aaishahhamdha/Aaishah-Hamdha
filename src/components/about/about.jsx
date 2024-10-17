@@ -5,9 +5,9 @@ import { faGraduationCap, faTrophy, faImages } from '@fortawesome/free-solid-svg
 import Edu from '../endorsements/Education.jsx'; 
 
 
-/*
+
 import Extra from "../extracurricular/extracurricular.jsx";
-import Gallery from "../gallery/gallery.jsx";*/
+import Gallery from "../gallery/gallery.jsx";
 import './about.css';
 
 const About = () => {
@@ -18,20 +18,17 @@ const About = () => {
         switch (activeSection) {
             case 'education':
                 return <Edu />;
-                 /*
+                
             case 'extracurricular':
                 return <Extra />;
             case 'gallery':
-                return <Gallery />;*/
+                return <Gallery />;
             default:
                 return <Edu />;
         }
     };
 
-    return (
-        <div className="about-container">
-            <div className="menu">
-
+   
 
     return (
         <div className="about-container">
@@ -44,7 +41,7 @@ const About = () => {
                     className={`fa-icon menu-item ${activeSection === 'education' ? 'active' : ''}`}
                 />
 
-                {/*
+            
 
                 <FontAwesomeIcon
                     icon={faTrophy}
@@ -58,7 +55,7 @@ const About = () => {
                     onClick={() => setActiveSection('gallery')}
                     className={`fa-icon menu-item ${activeSection === 'gallery' ? 'active' : ''}`}
 
-                />*/}
+                />
             </div>
 
             <div className={`content ${activeSection ? 'active' : ''}`}>
