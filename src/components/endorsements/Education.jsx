@@ -32,7 +32,6 @@ const educationDetails = [
       { name: "Data communication", grade: "A" },
       { name: "Operating Systems", grade: "A+" },
       { name: "Graphic Design", grade: "A" },
-      { name: "Data communication", grade: "A" },
       { name: "Computer Architecture", grade: "A" },
       { name: "Statistical Inference", grade: "A+" },
       { name: "Principles of Management", grade: "A+" },

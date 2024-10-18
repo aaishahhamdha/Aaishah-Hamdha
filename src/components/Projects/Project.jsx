@@ -136,25 +136,35 @@ const Project = () => {
         <div className='projects-title'>What I’ve Built</div>
         {chunkedProjects.map((row, rowIndex) => (
           <div className='row' key={rowIndex}>
-            {row.map((item, index) => (
-              <div
-                className='card'
-                key={item.id}
-                ref={el => tiltRefs.current[index + rowIndex * 4] = el}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className='title'>{item.name}</div>
-                <div className='image-card'>
-                  <img src={item.imgsrc} alt={item.name} />
-                </div>
-                <div className='description'>{item.description}</div>
-                <div className='technologies'>{item.tech2}</div>
-                <div className='link'>
-                  <a onClick={() => showModal(item)} className='read-more2'>more</a>
-                </div>
-              </div>
-            ))}
+{row.map((item, index) => (
+  <div
+    className='card'
+    key={item.id}
+    ref={el => tiltRefs.current[index + rowIndex * 4] = el}
+    data-aos="fade-up"
+    data-aos-delay={index * 100}
+  >
+    <div className='title'>
+      {item.name}
+      {item.name === 'Dataverse' && (
+        <span className='grade-a-badge'>
+         
+          Grade-A
+        </span>
+      )}
+    </div>
+    <div className='image-card'>
+      <img src={item.imgsrc} alt={item.name} />
+    </div>
+    <div className='description'>{item.description}</div>
+    <div className='technologies'>{item.tech2}</div>
+    <div className='link'>
+      <a onClick={() => showModal(item)} className='read-more2'>more</a>
+    </div>
+  </div>
+))}
+
+
           </div>
         ))}
 
