@@ -18,6 +18,7 @@ import TamilLiteraryDay from '../../assets/extra/poem.jpeg';
 import SpeechSinhala from '../../assets/extra/sinhala3.jpeg';
 import CodeGladiators from '../../assets/extra/Code gladiators.png';
 import Hackmoral from '../../assets/extra/hackmoral.png';
+import WebX from '../../assets/extra/webX.png';
 
 const variants = {
     hidden: { opacity: 0, y: 20 },
@@ -32,6 +33,11 @@ const Extracurricular = () => {
         {
             title: 'Code Gladiators-2024 Semi Finalist',
             image: CodeGladiators,
+        },
+        {
+            title: 'WebX FestX 5.0 - IEE WIE UoM',
+       
+            image: WebX,
         },
         {
             title: 'Hackmoral 6.0 -2024 INTECS',
