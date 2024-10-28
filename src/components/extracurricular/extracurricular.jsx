@@ -35,7 +35,7 @@ const Extracurricular = () => {
             image: CodeGladiators,
         },
         {
-            title: 'WebX FestX 5.0 - IEE WIE UoM',
+            title: 'WebX | FestX 5.0 - IEE WIE UoM(2024)',
        
             image: WebX,
         },
